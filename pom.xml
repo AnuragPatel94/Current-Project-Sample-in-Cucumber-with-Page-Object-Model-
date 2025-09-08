@@ -45,12 +45,53 @@
             <scope>test</scope>
         </dependency>
 
+              <!--  Cucumber (Java + TestNG + Reporting) -->
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-testng</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-core</artifactId>
+            <version>${cucumber.version}</version>
+        </dependency>
+
+             <!--  WebDriverManager (auto browser drivers) -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+
         <!-- JSON Schema Validator for Rest Assured -->
         <dependency>
             <groupId>io.rest-assured</groupId>
             <artifactId>json-schema-validator</artifactId>
             <version>5.4.0</version>
             <scope>test</scope>
+        
+                 
+                 <!-- Cobertura for code percentage accessed -->
+    <dependency>
+    <groupId>net.sourceforge.cobertura</groupId>
+    <artifactId>cobertura</artifactId>
+    <version>2.1.1</version>
+    <scope>test</scope>
+</dependency>
+        </dependency>
+        <!--  SLF4J for logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>2.0.13</version>
         </dependency>
 
         <!-- Extent Reports -->
