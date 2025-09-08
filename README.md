@@ -1,22 +1,21 @@
 Project Structure
-src
- └── test
-     ├── java
-     │    ├── runner
-     │    │    └── TestRunner.java
-     │    ├── stepdefinitions
-     │    │    └── LeaveApplySteps.java
-     │    ├── pages
-     │    │    └── LoginPage.java
-     │    └── utils
-     │         └── DriverFactory.java
-     └── resources
-          └── features
-               └── LeaveApply.feature
+src/test/java
+ ├── runner
+ │    └── TestRunner.java
+ ├── stepdefinitions
+ │    └── LeaveApplySteps.java
+ ├── pages
+ │    ├── LoginPage.java
+ │    ├── DashboardPage.java
+ │    └── LeaveApplyPage.java
+ └── utils
+      └── DriverFactory.java
 
+src/test/resources/features
+ └── LeaveApply.feature
 
-  “I implemented a Hybrid BDD framework using Cucumber + TestNG. 
-  The UI part is handled via Page Object Model (LoginPage), and the API part is validated using Rest Assured. 
-  The feature file defines scenarios in Gherkin, making it easy for non-technical stakeholders to understand. 
-  Step definitions call both Selenium and API validations, while the Driver Factory manages WebDriver lifecycle. 
-  This ensures end-to-end hybrid testing with clean architecture.”             
+Run For Maven cmd
+mvn clean test -Dbase.uri=https://glbg.servergi.com:8072/SIMWEBGLB/Employee/Leave%20Apply
+
+Project Explaination
+“We implemented a Hybrid BDD framework using Cucumber + TestNG, where UI is automated using Page Object Model and Selenium, while APIs are validated using Rest Assured. Both UI and API validations run in the same scenario, ensuring true end-to-end testing.”
