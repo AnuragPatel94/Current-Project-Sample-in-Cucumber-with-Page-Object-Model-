@@ -1,0 +1,24 @@
+Feature: Leave Apply Hybrid Flow
+  As an employee
+  I want to apply leave from the portal
+  So that I can validate the process using UI and API
+
+  Scenario: Validate Leave Apply using UI and API
+    Given I open the login page "https://glbg.servergi.com:8072/SIMWEBGLB/login"
+    When I login with username "Arti" and password "Mini@456"
+    Then I should see the employee dashboard
+
+    When I hover over the Employee menu
+    Then I should see the "Leave Apply" option in the dropdown
+    When I click on the "Leave Apply" button
+    Then I should be navigated to the Leave Apply page
+    And I should see the "New Entry" button
+
+    When I click on the "New Entry" button
+    And I select "2025-09-08" as from date and "2025-09-10" as to date
+    And I select leave type "CL" from the Leave Type dropdown
+    And I enter "Medical checkup" as the reason
+    Then I click on the "Save" button
+    And I should see a "Leave applied successfully" message
+
+    Then I validate the Leave Apply API response
